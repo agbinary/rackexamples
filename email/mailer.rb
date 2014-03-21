@@ -23,5 +23,5 @@ class Mailer
   end
 end
 
-mailer = Mailer.new("ang3l_gu@hotmail.com", "ang3l_gu@hotmail.com", "Hola")
-mailer.send_email("Hola Angie! :D")
+mailer = Mailer.new("ang3l_gu@hotmail.com", "ang3l_gu@hotmail.com")
+mailer.send_email("Hola", "Hola Angie! :D")
