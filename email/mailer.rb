@@ -20,7 +20,7 @@ class Mailer
         "subject" => subject,
         "html" => message
     }
-    response.body
+    response.code == 200
   end
 end
 
