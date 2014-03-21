@@ -7,7 +7,6 @@ class Mailer
   def initialize(from, to)
     @from = from
     @to = to
-    @subject = subject
   end
 
   def send_email(subject, message)
