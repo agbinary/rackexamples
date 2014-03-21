@@ -21,8 +21,4 @@ class Mailer
     }
     response.code == 200
   end
-<<<<<<< HEAD
 end
-=======
-end
->>>>>>> 781cdfbe96836b47737f8cd0bd509df2aa93681e
