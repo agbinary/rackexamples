@@ -22,6 +22,3 @@ class Mailer
     response.code == 200
   end
 end
-
-mailer = Mailer.new("ang3l_gu@hotmail.com", "ang3l_gu@hotmail.com")
-mailer.send_email("Hola", "Hola Angie! :D")
