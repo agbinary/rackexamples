@@ -22,6 +22,7 @@ class MailApp
               end
           end
       end
+      [404, {"Content-Type" => "text/plain"}, ["Error 404: Page not found"]]
   end
 
    private
