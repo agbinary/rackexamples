@@ -1,3 +1,4 @@
+require 'rack/utils'
 require './mailer'
 
 class MailApp
@@ -12,6 +13,7 @@ class MailApp
         when "POST"
           case env["PATH_INFO"]
             when "/send"
+              form = Rack::Utils.parse_nested_query(env["rack.input"].read)
               mailer = Mailer.new("Guillermo Iguaran", "guilleiguaran@gmail.com", "ang3l_gu@hotmail.com")
               if mailer.send_email("Hola", "Hola Angie!")
                 return render "sent.html"
