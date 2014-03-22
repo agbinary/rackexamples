@@ -12,8 +12,9 @@ class MailApp
         when "POST"
           case env["PATH_INFO"]
             when "/send"
-              mailer = Mailer.new("Guillermo Iguaran", "guilleiguaran@gmail.com", "ang3l_gu@hotmail.com")
-              if mailer.send_email("Hola", "Hola Angie!")
+              form = Rack::Utils.parse_nested_query(env["rack.input"].read)
+              mailer = Mailer.new(form["from_name"], form["from"], form["to"])
+              if mailer.send_email(form["subject"], form["message"])
                 return render "sent.html"
               else
                 return render "error.html"
