@@ -12,7 +12,7 @@ class MailApp
         when "POST"
           case env["PATH_INFO"]
             when "/send"
-              mailer = Mailer.new("ang3l_gu@hotmail.com", "ang3l_gu@hotmail.com")
+              mailer = Mailer.new("Guillermo Iguaran", "guilleiguaran@gmail.com", "ang3l_gu@hotmail.com")
               if mailer.send_email("Hola", "Hola Angie!")
                 return render "sent.html"
               else
