@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Mail App </title>
+</head>
+<body>
+    <h2> Formulario Mail App </h2>
+    <form action="/send" method="post">
+        <b> From: </b><br/>
+        <input type="text" name="from" size="80"/>
+        <br/><br/>
+        <b> To: </b><br/>
+        <input type="text" name="to" size="80"/>
+        <br/><br/>
+        <b> Subject: </b><br/>
+        <input type="text" name="subject" size="80"/>
+        <br/><br/>
+        <b> Message: </b><br/>
+        <textarea name="message" rows=15 cols=82 wrap /></textarea>
+        <br/><br/>
+        <input type="submit" value="Enviar" />
+    </form>
+</body>
+</html>
