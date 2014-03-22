@@ -13,8 +13,7 @@ class MailApp
           case env["PATH_INFO"]
             when "/send"
               mailer = Mailer.new("ang3l_gu@hotmail.com", "ang3l_gu@hotmail.com")
-              mailer.send_email("Hola", "Hola Angie!")
-              if response.code == 200
+              if mailer.send_email("Hola", "Hola Angie!")
                 return render "sent.html"
               else
                 return render "error.html"
