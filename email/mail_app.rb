@@ -2,7 +2,6 @@ require 'rack/utils'
 require './mailer'
 
 class MailApp
-
   def call(env)
     case env["REQUEST_METHOD"]
     when "GET"
@@ -25,10 +24,9 @@ class MailApp
     [404, {"Content-Type" => "text/plain"}, ["Error 404: Page not found"]]
   end
 
-   private
+  private
 
   def render(file)
     return [200, {"Content-Type" => "text/html"}, [File.read(file)]]
   end
-
 end
