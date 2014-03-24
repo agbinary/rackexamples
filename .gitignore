@@ -17,4 +17,6 @@ tmp
 _yardoc
 doc/
 .idea
-mailer/env.rb
+email/env.rb
+email2/env.rb
+email3/env.rb
