@@ -4,6 +4,7 @@ require './mailer'
 class MailApp
   def call(env)
     request = Rack::Request.new(env)
+    @response = Rack::Response.new
     if request.get?
       case env["PATH_INFO"]
         when "/"
@@ -20,12 +21,16 @@ class MailApp
           end
       end
     end
-    [404, {"Content-Type" => "text/plain"}, ["Error 404: Page not found"]]
+    @response.status = 404
+    @response.headers["Content-Type"] = "text/plain"
+    @response.write("Error 404: Page not found")
   end
 
   private
 
   def render(file)
-    return [200, {"Content-Type" => "text/html"}, [File.read(file)]]
+    @response.headers["Content-Type"] = "text/html"
+    @response.write(File.read(file))
+    @response.finish
   end
 end
