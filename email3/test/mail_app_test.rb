@@ -1,4 +1,4 @@
-require './mail_app'
+require_relative '../lib/mail_app'
 require 'minitest/autorun'
 require 'rack/test'
 require "mocha/mini_test"

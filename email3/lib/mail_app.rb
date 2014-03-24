@@ -1,6 +1,6 @@
 require 'rack/utils'
 require 'nancy'
-require './mailer'
+require_relative 'mailer'
 
 class MailApp < Nancy::Base
   include Nancy::Render

@@ -1,4 +1,4 @@
-require "./mailer"
+require_relative "../lib/mailer"
 require "minitest/autorun"
 require "mocha/mini_test"
 
