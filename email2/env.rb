@@ -1,0 +1,2 @@
+ENV["SENDGRID_TOKEN"] = "57-33-00.a"
+ENV["SENDGRID_USER"] = "ang3l_gu"
