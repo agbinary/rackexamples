@@ -1,9 +1,9 @@
 require './mail_app'
-require 'test/unit'
+require 'minitest/autorun'
 require 'rack/test'
 require "mocha/mini_test"
 
-class MailAppTest < Test::Unit::TestCase
+class MailAppTest < Minitest::Test
   include Rack::Test::Methods
 
   def app
@@ -36,6 +36,4 @@ class MailAppTest < Test::Unit::TestCase
     assert last_response.ok?
 
   end
-
-
 end
