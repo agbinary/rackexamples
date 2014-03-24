@@ -24,6 +24,7 @@ class MailApp
     @response.status = 404
     @response.headers["Content-Type"] = "text/plain"
     @response.write("Error 404: Page not found")
+    @response.finish
   end
 
   private
